@@ -6,3 +6,7 @@ envpy310/
 
 # Other
 tensorflow.ipynb
+
+# Data
+data/
+online-images.zip
