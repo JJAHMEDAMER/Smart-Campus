@@ -1,10 +1,15 @@
 # Import packages
 import cv2
 import matplotlib.pyplot as plt
+import os
+
+FOLDER_NAME = "Haar-Cascades"
+IMG_NAME = 'test_multi_face4.jpg'
 
 face_detection = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-img = cv2.imread('Haar Cascades/test_multi_face4.jpg')
+img_path = os.path.join(FOLDER_NAME, IMG_NAME)
+img = cv2.imread(img_path)
 img = cv2.resize(img, (750, 750))
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
@@ -24,7 +29,11 @@ for x,y, w, h in faces:
     cv2.rectangle(img, (x,y), (x+w,y+h), (0,0,255), 2)  # Overwrite the original image in memory
     ax[1].imshow(img)
     ax[1].set_title("Detected")
-    cv2.imwrite("Haar Cascades/test.jpg", cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
+    
+    # Save img
+    name, ext = os.path.splitext(IMG_NAME)
+    detected_img_path = os.path.join(FOLDER_NAME, name+"-detected"+ext)
+    cv2.imwrite(detected_img_path, cv2.cvtColor(img, cv2.COLOR_RGB2BGR))  # cv2 expects BGR img so must convert back
     
     cropped_img = img[y:y+h, x:x+w] # Y -> X
     ax[next].imshow(cropped_img)
