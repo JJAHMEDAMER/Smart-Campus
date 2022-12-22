@@ -1,0 +1,18 @@
+# Jupyter Lab
+.ipynb_checkpoints
+
+# Vertual Environment
+envpy310/
+
+# Other
+tensorflow.ipynb
+crop_img.py
+crop.py
+Haar-Cascades/test_multi_face4-detected.jpg
+
+# Data
+data/
+online-images.zip
+
+# Runner
+tempCodeRunnerFile.py
