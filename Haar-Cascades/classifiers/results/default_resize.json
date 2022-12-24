@@ -2,57 +2,57 @@
     {
         "path": "test_images\\1.jpg",
         "number_of_faces": 1,
-        "number_of_detected_faces": 1,
-        "Accuracy": 100.0
+        "number_of_detected_faces": 3,
+        "Accuracy": 300.0
     },
     {
         "path": "test_images\\13.jpg",
         "number_of_faces": 13,
-        "number_of_detected_faces": 30,
-        "Accuracy": 230.76923076923075
+        "number_of_detected_faces": 22,
+        "Accuracy": 169.23076923076923
     },
     {
         "path": "test_images\\2.jpg",
         "number_of_faces": 2,
-        "number_of_detected_faces": 50,
-        "Accuracy": 2500.0
+        "number_of_detected_faces": 9,
+        "Accuracy": 450.0
     },
     {
         "path": "test_images\\5-1.jpg",
         "number_of_faces": 5,
-        "number_of_detected_faces": 74,
-        "Accuracy": 1480.0
+        "number_of_detected_faces": 15,
+        "Accuracy": 300.0
     },
     {
         "path": "test_images\\5.jpg",
         "number_of_faces": 5,
-        "number_of_detected_faces": 175,
-        "Accuracy": 3500.0
+        "number_of_detected_faces": 10,
+        "Accuracy": 200.0
     },
     {
         "path": "test_images\\6-2.jpg",
         "number_of_faces": 6,
-        "number_of_detected_faces": 103,
-        "Accuracy": 1716.6666666666667
+        "number_of_detected_faces": 20,
+        "Accuracy": 333.33333333333337
     },
     {
         "path": "test_images\\6-3.jpeg",
         "number_of_faces": 6,
-        "number_of_detected_faces": 11,
-        "Accuracy": 183.33333333333331
+        "number_of_detected_faces": 13,
+        "Accuracy": 216.66666666666666
     },
     {
         "path": "test_images\\6.jpg",
         "number_of_faces": 6,
-        "number_of_detected_faces": 81,
-        "Accuracy": 1350.0
+        "number_of_detected_faces": 12,
+        "Accuracy": 200.0
     },
     {
-        "total_time": 26.792097330093384
+        "total_time": 3.294018030166626
     },
     {
-        "avg_accuracy": 1193.1818181818182,
+        "avg_accuracy": 236.36363636363637,
         "total_number_faces": 44,
-        "total_number_detected": 525
+        "total_number_detected": 104
     }
 ]
