@@ -3,12 +3,22 @@ import cv2
 import os
 from time import time
 
+print("running...")
+
 start = time()
 
 IMGS_DIR = 'test_images'
 img_path_list = os.listdir(IMGS_DIR)
 
-face_detection = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+classifiers_list = [
+    'haarcascade_frontalface_alt.xml',
+    'haarcascade_frontalface_alt2.xml',
+    'haarcascade_frontalface_alt_tree.xml',
+    'haarcascade_frontalface_default.xml',
+    'haarcascade_profileface.xml',
+]
+
+face_detection = cv2.CascadeClassifier(cv2.data.haarcascades + classifiers_list[4])
 
 
 img_data_list = []
@@ -29,9 +39,10 @@ for img_path in img_path_list:
 total_number_detected = 0
 for img_data in img_data_list:
     img = cv2.imread(img_data["path"])
-    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img = cv2.resize(img, (750,750))
     
-    faces = face_detection.detectMultiScale(img_gray,1.05,1)  # 1.05, 55 -> No Resize  # 
+    faces = face_detection.detectMultiScale(img,1.05,1)  # 1.05, 55 -> No Resize  # 
     # img , scale_factor, nearest neighbor
     
     img_data["number_of_detected_faces"] = len(faces)
@@ -48,5 +59,7 @@ img_data_list.append({
     'total_number_detected': total_number_detected
     })
 
-with open('Haar-Cascades/classifiers/results/default_noResize.json', "w") as outfile:  
+with open('Haar-Cascades/classifiers/results/profile_resize.json', "w") as outfile:  
     json.dump(img_data_list, outfile)
+    
+print("Done")
