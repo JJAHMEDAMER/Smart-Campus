@@ -2,9 +2,11 @@
 import cv2
 import matplotlib.pyplot as plt
 
-face_detection = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+CLASSIFIER_BASE_DIR = 'Haar-Cascades-Cuda\\haarcascades_cuda\\'
 
-img = cv2.imread('test_images/2.jpg')
+face_detection = cv2.CascadeClassifier(CLASSIFIER_BASE_DIR + 'haarcascade_frontalface_default.xml')
+
+img = cv2.imread('test_images/1.jpg')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
