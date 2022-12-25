@@ -21,3 +21,5 @@ opencv-repo/
 
 # Cascades and classifiers
 Haar-Cascades-Cuda/haarcascades_cuda/
+LBP-Cascades/lbpcascades/
+Hog-Cascades/hogcascades/
