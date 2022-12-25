@@ -1,0 +1,58 @@
+[
+    {
+        "path": "test_images\\1.jpg",
+        "number_of_faces": 1,
+        "number_of_detected_faces": 2,
+        "Accuracy": 200.0
+    },
+    {
+        "path": "test_images\\13.jpg",
+        "number_of_faces": 13,
+        "number_of_detected_faces": 20,
+        "Accuracy": 153.84615384615387
+    },
+    {
+        "path": "test_images\\2.jpg",
+        "number_of_faces": 2,
+        "number_of_detected_faces": 10,
+        "Accuracy": 500.0
+    },
+    {
+        "path": "test_images\\5-1.jpg",
+        "number_of_faces": 5,
+        "number_of_detected_faces": 12,
+        "Accuracy": 240.0
+    },
+    {
+        "path": "test_images\\5.jpg",
+        "number_of_faces": 5,
+        "number_of_detected_faces": 8,
+        "Accuracy": 160.0
+    },
+    {
+        "path": "test_images\\6-2.jpg",
+        "number_of_faces": 6,
+        "number_of_detected_faces": 13,
+        "Accuracy": 216.66666666666666
+    },
+    {
+        "path": "test_images\\6-3.jpeg",
+        "number_of_faces": 6,
+        "number_of_detected_faces": 8,
+        "Accuracy": 133.33333333333331
+    },
+    {
+        "path": "test_images\\6.jpg",
+        "number_of_faces": 6,
+        "number_of_detected_faces": 9,
+        "Accuracy": 150.0
+    },
+    {
+        "total_time": 9.20354413986206
+    },
+    {
+        "avg_accuracy": 186.36363636363635,
+        "total_number_faces": 44,
+        "total_number_detected": 82
+    }
+]
