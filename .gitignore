@@ -15,3 +15,9 @@ online-images.zip
 
 # Runner
 tempCodeRunnerFile.py
+
+# Open CV
+opencv-repo/
+
+# Cascades and classifiers
+Haar-Cascades-Cuda/haarcascades_cuda/
