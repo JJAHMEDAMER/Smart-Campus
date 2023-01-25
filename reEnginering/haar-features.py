@@ -39,7 +39,7 @@ print(img_int_df.shape)  # Gray scale image
 
 
 '''
-
+INTEGRAL IMAGES
 '''
 
 print(img_int_df.iloc[:5, :5])
