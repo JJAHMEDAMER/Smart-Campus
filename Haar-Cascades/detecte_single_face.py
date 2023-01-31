@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 face_detection = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-img = cv2.imread('test_images/2.jpg')
+img = cv2.imread('test_images/1.jpg')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

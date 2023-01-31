@@ -12,7 +12,7 @@ while True:
     if cv2.waitKey(1) == ord("q"): # press q to close
         break
     
-cam.release
+cam.release()
 cv2.destroyAllWindows()
 
 

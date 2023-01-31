@@ -32,22 +32,18 @@ index = 0
 for classifier in classifiers_list:
     
     face_detection = cv2.CascadeClassifier(cv2.data.haarcascades + classifier)
-    faces = face_detection.detectMultiScale(img,1.01,1)
+    faces = face_detection.detectMultiScale(img,1.01,10)
     
+    num_face = 0
     for x, y, w, h in faces:
         cv2.rectangle(img, (x,y), (x+w,y+h), (0,0,255), 10)
+        num_face += 1
     
-    n = len(faces)
+    # num_face = len(faces)
     index = index + 1
     flatten_axs[index].imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-    flatten_axs[index].set_title(classifier + f'Detected Faces: {n}', fontsize=10)
+    flatten_axs[index].set_title(classifier[12:] + f'\nDetected Faces: {num_face}', fontsize=10)
     
-    
-     
-    
+
 plt.show()
     
-    
-
-    
-

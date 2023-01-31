@@ -18,23 +18,24 @@ classifiers_list = [
     'haarcascade_profileface.xml',
 ]
 
-face_detection = cv2.CascadeClassifier(cv2.data.haarcascades + classifiers_list[4])
+face_detection = cv2.CascadeClassifier(cv2.data.haarcascades + classifiers_list[3])
 
 
 img_data_list = []
 total_number_faces = 0
 for img_path in img_path_list:
     name, ext = os.path.splitext(img_path)
-    number_of_faces = name.split('-')
-    
-    img_data_list.append({
-        "path": os.path.join(IMGS_DIR, img_path),
-        "number_of_faces": int(number_of_faces[0]),
-        "number_of_detected_faces": 0,
-        "Accuracy": 0
-    })
-    
-    total_number_faces = total_number_faces + int(number_of_faces[0])
+    if ext in ['.jpg', '.jpeg', '.png'] and name != 'x':
+        number_of_faces = name.split('-')
+        
+        img_data_list.append({
+            "path": os.path.join(IMGS_DIR, img_path),
+            "number_of_faces": int(number_of_faces[0]),
+            "number_of_detected_faces": 0,
+            "Accuracy": 0
+        })
+        
+        total_number_faces = total_number_faces + int(number_of_faces[0])
 
 total_number_detected = 0
 for img_data in img_data_list:

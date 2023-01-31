@@ -31,7 +31,7 @@ while True:
     if cv2.waitKey(1) == 32: # Space Bar to close
         break
     
-webcam.release
+webcam.release()
 cv2.destroyAllWindows()
 
 end_time = time.time()
